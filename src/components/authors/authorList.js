@@ -16,7 +16,6 @@ var AuthorList = React.createClass({
             return (
                 <tr key={author.id}>
                     <td><Link to="manageAuthor" params={{id: author.id}}>{author.id}</Link></td>
-                    <td><a href={"/#authors/" + author.id}>{author.id}</a></td>
                     <td>{author.firstName} {author.lastName}</td>
                     <td>{author.company}</td>
                 </tr>
