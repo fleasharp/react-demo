@@ -22,7 +22,7 @@ var CourseActions = {
         // Hey dispatcher, go tell all the stores that an course was just created.
         Dispatcher.dispatch({
             actionType: ActionTypes.UPDATE_COURSE,
-            author: updatedCourse
+            course: updatedCourse
         });
     },
 

@@ -51420,7 +51420,7 @@ var CourseActions = {
         // Hey dispatcher, go tell all the stores that an course was just created.
         Dispatcher.dispatch({
             actionType: ActionTypes.UPDATE_COURSE,
-            author: updatedCourse
+            course: updatedCourse
         });
     },
 
@@ -52220,7 +52220,6 @@ var ManageCoursePage = React.createClass({displayName: "ManageCoursePage",
         var value = event.target.value;
         this.state.course[field] = value;
 
-        console.log(this.state.course);
         return this.setState({course: this.state.course});
     },
 
@@ -52230,11 +52229,6 @@ var ManageCoursePage = React.createClass({displayName: "ManageCoursePage",
 
         if (this.state.course.title.length < 2) {
             this.state.errors.title = "Title must be at least 2 characters.";
-            formIsValid = false;
-        }
-
-         if (this.state.course.lastName.length < 2) {
-            this.state.errors.lastName = "Title must be at least 2 characters.";
             formIsValid = false;
         }
 
